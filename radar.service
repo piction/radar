@@ -1,0 +1,10 @@
+[Unit]
+Description=radar speed logger
+After=multi-user.target
+[Service]
+Type=idle
+Restart=always
+ExecStartPre=/bin/sleep 30
+ExecStart=/usr/bin/python3 /home/pi/skw/radar.py
+[Install]
+WantedBy=multi-user.target
